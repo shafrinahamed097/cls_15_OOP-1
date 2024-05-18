@@ -1,8 +1,16 @@
 <?php
 
+
+/*
+Interface are tools and concepts that technology developers use as points of interaction
+between hardware and software components. They help all components within a system communicate
+with each other via an input-output system and detailed protocols while also allowing them 
+to function independently.
+
+*/
 interface Printer{
     function print();
-    
+
 }
 
 class PDFPrinter implements Printer {
@@ -23,7 +31,7 @@ class ThreeDPrinter  implements Printer{
     }
 }
 
-function printdoc($printer){
+function printdoc(Printer $printer){
     $printer->print();
 }
 
@@ -32,8 +40,3 @@ $paper = new PaperPrinter();
 $threeDPrinter = new ThreeDPrinter();
 
 printdoc($threeDPrinter);
-
-
-
-
-
