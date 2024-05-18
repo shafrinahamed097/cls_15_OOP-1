@@ -11,7 +11,8 @@ interface Vehicle{
 
 abstract class VehicleX implements Vehicle{
     function getMilage($distance, $fuel) {
-        echo "Vehicle Mileage is " .($distance/$fuel)." kmpl \n";
+        $vehicle=get_class($this);
+        echo "{$vehicle} Mileage is " .($distance/$fuel)." kmpl \n";
     }
 }
 
@@ -51,7 +52,8 @@ class Truck extends VehicleX{
         echo "Truck is Stopped" ,"\n";
     }
 
-   function getMilage($distance, $fuel){
+//    Method Over-Ridding 
+    function getMilage($distance, $fuel){
     echo "Vehicle Milage is: " .($distance/$fuel) ." MPL \n";
    }
 
