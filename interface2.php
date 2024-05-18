@@ -10,8 +10,8 @@ interface Vehicle{
 }
 
 abstract class VehicleX implements Vehicle{
-    function getMilage($distance, $fuel)    {
-        echo "Vehicle Mileage is ". ($distance/$fuel) ."\n";
+    function getMilage($distance, $fuel) {
+        echo "Vehicle Mileage is " .($distance/$fuel)." kmpl \n";
     }
 }
 
@@ -39,9 +39,22 @@ class MotorCyle extends VehicleX{
         echo "Honda Stopped" ."\n";
     }
 
-    public function getMilage($distance, $fuel){
-        echo "Honda Mileage is: ". ($distance/$fuel) ."\n";
+    
+}
+
+class Truck extends VehicleX{
+    public function start(){
+        echo "Truck is Started" ,"\n";
     }
+
+    public function stop(){
+        echo "Truck is Stopped" ,"\n";
+    }
+
+   function getMilage($distance, $fuel){
+    echo "Vehicle Milage is: " .($distance/$fuel) ." MPL \n";
+   }
+
 }
 
 $m = new MotorCyle();
@@ -67,3 +80,15 @@ Honda Mileage is: 2
 
 
     */
+
+    $p= new Truck();
+    $p->start();
+    $p->stop();
+    $p->getMilage("20","30");
+
+    /*
+
+    Truck is Started
+Truck is Stopped
+Vehicle Milage is: 0.66666666666667 MPL 
+*/
