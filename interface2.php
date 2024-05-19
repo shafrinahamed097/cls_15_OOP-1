@@ -64,24 +64,14 @@ $m->start();
 $m->stop();
 $m->getMilage("1000","30");
 
-/*
- Honda Started
-Honda Stopped
-Honda Mileage is: 33.333333333333
-*/
+
 
 $n=new Car();
 $n->start();
 $n->stop();
     $m->getMilage("20","10");
 
-    /*
-Car is Started
-Car is Stopped
-Honda Mileage is: 2
 
-
-    */
 
     $p= new Truck();
     $p->start();
@@ -90,7 +80,14 @@ Honda Mileage is: 2
 
     /*
 
-    Truck is Started
+    Honda Started
+Honda Stopped
+MotorCyle Mileage is 33.333333333333 kmpl 
+Car is Started
+Car is Stopped
+MotorCyle Mileage is 2 kmpl 
+Truck is Started
 Truck is Stopped
 Vehicle Milage is: 0.66666666666667 MPL 
+
 */
