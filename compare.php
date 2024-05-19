@@ -2,10 +2,11 @@
 
 class Person
 {
-   public function __construct(public $name, public $age){}
+   public function __construct(public $name){}
 }
 
-$p1 = new Person("Shafrin", 27);
-$p2 = new Person("Shafrin", 25);
+$p1 = new Person("Shafrin");
+$p2 = new Person("Shafrin");
 
-echo $p1 == $p2;
+echo $p1 == $p2; // compare value
+echo $p1 === $p2; // compare reference/object
