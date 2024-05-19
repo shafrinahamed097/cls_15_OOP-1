@@ -1,6 +1,7 @@
 <?php
 
 class Person{
+    // Property promotion
     function __construct(private $name, private $age){}
 
     function introduce(){
@@ -8,5 +9,5 @@ class Person{
     }
 }
 
-$person1 = new Person("Shafrin", 25);
+$person1 = new Person("Shafrin", 27 );
 $person1->introduce();
