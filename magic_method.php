@@ -1,7 +1,7 @@
 <?php
 class Person {
-    private $name;
-    private $age;
+    public $name;
+    public $age;
 
     function __construct($name, $age) {
         $this->name = $name;
@@ -28,4 +28,5 @@ class Person {
 
 
 $p1 = new Person("Shakib", 27);
-echo $p1 ; // Added newline for readability
+echo serialize($p1); // Added newline for readability
+print_r(unserialize(serialize($p1)));
