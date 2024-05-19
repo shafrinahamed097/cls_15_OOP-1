@@ -13,3 +13,8 @@ $p2 = clone $p1;
 $p2->name="David";
 $p1->introduce();
 $p2->introduce();
+
+/*
+My name is John, and I'm 30 years old
+My name is David, and I'm 30 years old
+*/
